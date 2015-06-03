@@ -61,7 +61,30 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
+      tasks: ['concat']
+    },
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1,
+        sourceMap: true
+      },
+      target: {
+        files: {
+          'dist/style.css': [
+            'static/assets/plugins/bootstrap/css/bootstrap.min.css',
+            'static/assets/css/style.css',
+            'static/assets/css/headers/header-default.css',
+            'static/assets/css/footers/footer-v1.css',
+            'static/assets/plugins/animate.css',
+            'static/assets/plugins/line-icons/line-icons.css',
+            'static/assets/plugins/font-awesome/css/font-awesome.min.css',
+            'static/assets/plugins/parallax-slider/css/parallax-slider.css',
+            'static/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css',
+            'static/assets/css/custom.css'
+          ]
+        }
+      }
     }
   });
 
@@ -70,8 +93,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('test', ['jshint']);
 
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 };
