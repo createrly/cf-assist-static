@@ -72,3 +72,12 @@
         </div><!--/navbar-collapse-->
     </div>
     <!--=== End Header ===-->
+
+    <?php if (strlen(get_field('header_image')) > 0): ?>
+      <!--=== Breadcrumbs ===-->
+      <div class="breadcrumbs-v3 text-center" style="background:url('<?php the_field('header_image'); ?>');background-size:cover;background-position:center center;">
+        <div class="container">
+          <h1><?php the_field('title_text'); ?></h1>
+        </div>
+      </div>
+    <?php endif; ?>
