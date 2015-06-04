@@ -12,30 +12,29 @@
     <?php endwhile; ?>
 
     <?php /* Courses */ ?>
-    <?php $courses = get_posts(array('posts_per_page' => -1, 'post_type' => 'page', 'post_parent' => get_the_ID()));
-      if (count($courses) > 0): ?>
+    <?php if (have_rows('courses')): ?>
       <div class="headline"></div>
       <div class="row margin-bottom-20">
-        <?php foreach ($courses as $course): ?>
+        <?php while (have_rows('courses')): the_row(); ?>
           <div class="col-md-4 col-sm-6">
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
               <div class="thumbnail-img">
                 <div class="overflow-hidden">
-                  <img class="img-responsive" src="<?php the_field('course_image', $course->ID); ?>">
+                  <img class="img-responsive" src="<?php the_sub_field('course_image'); ?>">
                 </div>
-                <a class="btn-more hover-effect" href="<?php echo get_permalink($course->ID); ?>">read more +</a>
+                <a class="btn-more hover-effect" href="<?php the_sub_field('course_url'); ?>">read more +</a>
               </div>
               <div class="caption">
-                <h3><a class="hover-effect" href="<?php echo get_permalink($course->ID); ?>"><?php echo $course->post_title; ?></a></h3>
-                <small style="color:grey;"><em><?php echo $course->post_date; ?></em></small>
-                <p><?php the_field('course_summary', $course->ID); ?></p>
+                <h3><a class="hover-effect" href="<?php the_sub_field('course_url'); ?>"><?php the_sub_field('course_title'); ?></a></h3>
+                <small style="color:grey;"><em><?php the_sub_field('course_date'); ?></em></small>
+                <p><?php the_sub_field('course_summary'); ?></p>
               </div>
             </div>
           </div>
-        <?php endforeach; ?>
+        <?php endwhile; ?>
       </div>
     <?php endif; ?>
-    
+
   </div>
 <?php endif; ?>
 
