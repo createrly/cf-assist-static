@@ -59,7 +59,7 @@
                       <a class="btn-more hover-effect" href="<?php the_sub_field('link'); ?>">Read More +</a>
                   </div>
                   <div class="caption">
-                      <h3><a class="hover-effect" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('link'); ?></a></h3>
+                      <h3><a class="hover-effect" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('heading'); ?></a></h3>
                       <p><?php the_sub_field('description'); ?></p>
                   </div>
               </div>
