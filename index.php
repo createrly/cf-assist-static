@@ -6,7 +6,7 @@
     <div class="slider-inner">
       <div id="da-slider" class="da-slider">
         <?php while (have_rows('image_sliders')): the_row(); ?>
-          <div class="da-slide" style="background:transparent url('<?php the_sub_field('image'); ?>');">
+          <div class="da-slide" style="background:transparent url('<?php the_sub_field('image'); ?>');background-size:cover;">
             <h2>
               <?php $lines = explode("\n", get_sub_field('heading'));
               for ($i = 0; $i < count($lines); $i++) if ($lines[$i] === '') unset($lines[$i]);
