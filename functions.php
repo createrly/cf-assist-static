@@ -162,7 +162,7 @@ class CFAssist_Widget_Recent_Posts extends WP_Widget {
 		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 			<li>
 				<h3><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-				<small><?php the_date(); ?> / <?php the_category(', '); ?></small>
+				<small><?php echo get_the_date(); ?> / <?php the_category(', '); ?></small>
         <p><?php the_excerpt(); ?></p>
 			</li>
 		<?php endwhile; ?>
