@@ -81,6 +81,12 @@
 
         <?php endwhile; ?>
 
+        <ul class="pager pager-v3 pager-sm no-margin-bottom">
+          <li class="previous"><?php previous_posts_link(); ?></li>
+          <li class="page-amount"><?php echo get_query_var('paged') ? get_query_var('paged') : 1; ?> of <?php echo $wp_query->max_num_pages; ?></li>
+          <li class="next"><?php next_posts_link(); ?></li>
+        </ul>
+
       </div>
     </div>
   </div>
