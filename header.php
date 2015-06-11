@@ -72,12 +72,11 @@
         </div><!--/navbar-collapse-->
     </div>
     <!--=== End Header ===-->
-
-    <?php if (strlen(get_field('header_image')) > 0): ?>
+    <?php if (strlen(get_field('header_image', is_home() ? get_option('page_for_posts') : get_the_ID())) > 0): ?>
       <!--=== Breadcrumbs ===-->
-      <div class="breadcrumbs-v3 text-center" style="background:url('<?php the_field('header_image'); ?>');background-size:cover;background-position:center center;">
+      <div class="breadcrumbs-v3 text-center" style="background:url('<?php the_field('header_image', is_home() ? get_option('page_for_posts') : get_the_ID()); ?>');background-size:cover;background-position:center center;">
         <div class="container">
-          <h1><?php the_field('title_text'); ?></h1>
+          <h1><?php the_field('title_text', is_home() ? get_option('page_for_posts') : get_the_ID()); ?></h1>
         </div>
       </div>
     <?php endif; ?>

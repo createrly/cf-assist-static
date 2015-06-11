@@ -8,9 +8,27 @@ if (!function_exists('cfassistInit'))
   		'primary'   => 'Header Menu',
       'footer'    => 'Footer Menu'
     ));
+    add_theme_support('post-thumbnails');
   }
 }
 add_action('after_setup_theme', 'cfassistInit');
+
+if (!function_exists('cfassistSidebar'))
+{
+  function cfassistSidebar()
+  {
+    register_sidebar( array(
+      'name'          => 'Blog Sidebar',
+      'id'            => 'blog-sidebar',
+      'description'   => 'Widgets in this area will be shown on blog posts and pages.',
+      'before_widget' => '',
+      'after_widget'  => '',
+      'before_title'  => '<div class="headline-v2 bg-color-light"><h2>',
+      'after_title'   => '</h2></div>',
+    ));
+  }
+}
+add_action('widgets_init', 'cfassistSidebar');
 
 // TGM Automatic Plugins
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
