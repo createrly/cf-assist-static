@@ -67,7 +67,8 @@ module.exports = function(grunt) {
       options: {
         shorthandCompacting: false,
         roundingPrecision: -1,
-        sourceMap: true
+        sourceMap: true,
+        report: 'min'
       },
       target: {
         files: {
@@ -81,6 +82,7 @@ module.exports = function(grunt) {
             'static/assets/plugins/font-awesome/css/font-awesome.min.css',
             'static/assets/plugins/parallax-slider/css/parallax-slider.css',
             'static/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css',
+            'static/assets/css/blocks.css',
             'static/assets/css/custom.css'
           ]
         }
