@@ -114,9 +114,20 @@
     <?php while (have_posts()): the_post(); ?>
       <div class="headline"><h2><?php the_title(); ?></h2></div>
       <div class="row">
-        <div class="col-md-12 md-margin-bottom-50">
-          <?php the_content(); ?>
-        </div>
+        <?php if (get_page_template_slug() === 'two-column.php'): ?>
+          <div class="col-md-6">
+            <?php the_content(); ?>
+          </div>
+          <div class="col-md-6">
+            <?php if (strlen(get_field('second_column_image')) > 0): ?>
+              <img class="img-responsive" src="<?php the_field('second_column_image'); ?>">
+            <?php endif; ?>
+          </div>
+        <?php else: ?>
+          <div class="col-md-12 md-margin-bottom-50">
+            <?php the_content(); ?>
+          </div>
+        <?php endif; ?>
       </div>
     <?php endwhile; ?>
 
