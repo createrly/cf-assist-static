@@ -59,11 +59,28 @@
 
         <?php while (have_posts()): the_post(); ?>
           <div class="row margin-bottom-20">
-            <?php if (has_post_thumbnail()): ?>
-              <div class="col-sm-5 sm-margin-bottom-20">
-                <?php the_post_thumbnail(null, array('class' => 'img-responsive')); ?>
-              </div>
-            <?php endif; ?>
+            <div class="col-sm-5 sm-margin-bottom-20">
+              <?php if (get_post_format() === 'gallery'): ?>
+                <div class="carousel slide" data-ride="carousel" id="blog-carousel-<?php the_ID(); ?>">
+                  <div class="carousel-inner" role="listbox">
+                    <ol class="carousel-indicators">
+                      <?php $i = 0; foreach (get_post_gallery_images() as $image): ?>
+                        <li data-target="#blog-carousel-<?php the_ID(); ?>" data-slide-to="<?php echo $i; ?>" class="<?php if ($i++ === 0): ?>active<?php endif; ?> rounded-x"></li>
+                      <?php endforeach; ?>
+                    </ol>
+                    <?php $i = 0; foreach (get_post_gallery_images() as $image): ?>
+                      <div class="item<?php if ($i++ === 0): ?> active<?php endif; ?>">
+                        <img src="<?php echo $image; ?>">
+                      </div>
+                    <?php endforeach; ?>
+                  </div>
+                </div>
+              <?php else: ?>
+                <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail(null, array('class' => 'img-responsive')); ?>
+                <?php endif; ?>
+              <?php endif; ?>
+            </div>
             <div class="col-sm-7 news-v3">
               <div class="news-v3-in-sm no-padding">
                 <ul class="list-inline posted-info">

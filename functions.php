@@ -9,6 +9,7 @@ if (!function_exists('cfassistInit'))
       'footer'    => 'Footer Menu'
     ));
     add_theme_support('post-thumbnails');
+    add_theme_support('post-formats', array('gallery', 'video'));
   }
 }
 add_action('after_setup_theme', 'cfassistInit');
