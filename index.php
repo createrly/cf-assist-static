@@ -154,8 +154,27 @@
         <?php endwhile; ?>
       </div>
     <?php endif; ?>
-
   </div>
+
+  <?php /* Partnerships */ ?>
+  <?php if (have_rows('partnership_blocks')): ?>
+    <div class="container content-md" style="background:#e8e8e8;">
+      <ul class="row block-grid-v2">
+        <?php while (have_rows('partnership_blocks')): the_row(); ?>
+          <li class="col-md-3 col-sm-6 md-margin-bottom-30">
+            <div class="easy-block-v1">
+              <img class="img-responsive" src="<?php the_sub_field('image'); ?>" alt="">
+            </div>
+            <div class="block-grid-v2-info rounded-bottom">
+              <h3><a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('title'); ?></a></h3>
+              <?php the_sub_field('description'); ?>
+              <a href="<?php the_sub_field('link'); ?>" class="btn-u btn-u-sm">Learn More</a>
+            </div>
+          </li>
+        <?php endwhile; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
 <?php endif; ?>
 
 <?php get_footer();
