@@ -62,7 +62,8 @@
                         "brown": "Brown",
                         "green": "Green",
                         "sea": "Seafoam",
-                        "dark": "Dark"
+                        "dark": "Dark",
+                        "red": "Red"
                     },
                     "default_value": {
                         "": ""
@@ -216,7 +217,8 @@
                         "brown": "Brown",
                         "green": "Green",
                         "sea": "Seafoam",
-                        "dark": "Dark"
+                        "dark": "Dark",
+                        "red": "Red"
                     },
                     "default_value": {
                         "": ""
@@ -370,7 +372,8 @@
                         "brown": "Brown",
                         "green": "Green",
                         "sea": "Seafoam",
-                        "dark": "Dark"
+                        "dark": "Dark",
+                        "red": "Red"
                     },
                     "default_value": {
                         "": ""
@@ -480,5 +483,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1434007454
+    "modified": 1434175789
 }

@@ -154,6 +154,22 @@
         <?php endwhile; ?>
       </div>
     <?php endif; ?>
+
+    <?php if (have_rows('reports')): ?>
+      <div class="row category margin-bottom-20">
+        <?php while (have_rows('reports')): the_row(); ?>
+          <div class="col-md-4 col-sm-6">
+            <div class="content-boxes-v3 margin-bottom-10 md-margin-bottom-20">
+              <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-hdd-o"></i>
+              <div class="content-boxes-in-v3">
+                <h3 style="line-height:35px;"><a href="<?php the_sub_field('link'); ?>" target="_blank"><?php the_sub_field('title'); ?></a></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        <?php endwhile; ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php /* Partnerships */ ?>
