@@ -135,18 +135,18 @@
           <div class="col-md-12 md-margin-bottom-50">
             <?php the_content(); ?>
           </div>
+          <?php if (get_field('enable_course_pacing') === true): ?>
+            <div class="col-lg-12 col-md-3">
+              <button class="btn btn-sm rounded facilitated"><a href="#">Facilitated Courses</a></button>
+              <button class="btn btn-sm rounded self-paced"><a href="#">Self-Paced Courses</a></button>
+            </div>
+          <?php endif; ?>
         <?php endif; ?>
       </div>
     <?php endwhile; ?>
 
     <?php /* Courses */ ?>
     <?php if (have_rows('courses')): $enablePacing = get_field('enable_course_pacing'); ?>
-      <?php if ($enablePacing === true): ?>
-        <div class="col-lg-12 col-md-3">
-          <button class="btn btn-sm rounded facilitated"><a href="#">Facilitated Courses</a></button>
-          <button class="btn btn-sm rounded self-paced"><a href="#">Self-Paced Courses</a></button>
-        </div>
-      <?php endif; ?>
       <div class="headline"></div>
       <div class="row margin-bottom-20">
         <?php while (have_rows('courses')): the_row(); ?>
