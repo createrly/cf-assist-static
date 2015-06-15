@@ -3,3 +3,81 @@
 .da-slider {
     background: transparent url(../img/cfassist/bg.jpg);
 }
+
+.breadcrumbs-v3.img-v1 {
+  background: url(../img/cfassist/aboutmast.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.breadcrumbs-v3.img-v2 {
+  background: url(../img/breadcrumbs/img2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.breadcrumbs-v3.img-v3 {
+  background: url(../img/breadcrumbs/img3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.breadcrumbs-v3.img-v4 {
+  background: url(../img/cfassist/contactmast.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ecourse {
+    background-color: #ea7d2b;
+    float: right;
+    margin-right: 5px;
+}
+
+.ecourse a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.mooc a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.webinar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bsl a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.mooc {
+    background-color: #6599ce;
+    float: right;
+    margin-right: 5px;
+}
+
+.webinar {
+    background-color: #92c136;
+    float: right;
+    margin-right: 5px;
+}
+
+.bsl {
+    background-color: #8d8f8f;
+    float: right;
+    margin-right: 5px;
+}
+
+.facilitated {
+    float: right;
+    margin-right: 5px;
+}
+
+.self-paced {
+    float: right;
+    margin-right: 5px;
+}
