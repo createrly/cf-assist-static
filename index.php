@@ -140,11 +140,17 @@
     <?php endwhile; ?>
 
     <?php /* Courses */ ?>
-    <?php if (have_rows('courses')): ?>
+    <?php if (have_rows('courses')): $enablePacing = get_field('enable_course_pacing'); ?>
+      <?php if ($enablePacing === true): ?>
+        <div class="col-lg-12 col-md-3">
+          <button class="btn btn-sm rounded facilitated"><a href="#">Facilitated Courses</a></button>
+          <button class="btn btn-sm rounded self-paced"><a href="#">Self-Paced Courses</a></button>
+        </div>
+      <?php endif; ?>
       <div class="headline"></div>
       <div class="row margin-bottom-20">
         <?php while (have_rows('courses')): the_row(); ?>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-6 course <?php if ($enablePacing === true): ?>pacing-<?php the_sub_field('pacing'); ?><?php endif; ?>">
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
               <div class="thumbnail-img">
                 <div class="overflow-hidden">
