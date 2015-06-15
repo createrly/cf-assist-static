@@ -113,10 +113,10 @@
   <div class="container content-sm">
     <?php if (wp_get_post_parent_id(get_the_ID()) === 11): ?>
       <div class="col-lg-12 col-md-3">
-        <button class="btn btn-sm rounded ecourse"><a href="/innovative-learning/e-courses/">eCourses</a></button>
+        <button class="btn btn-sm rounded bsl"><a href="/innovative-learning/bite-size-learning/">Bite-sized Learning</a></button>
         <button class="btn btn-sm rounded mooc"><a href="/innovative-learning/moocs/">MOOCs</a></button>
         <button class="btn btn-sm rounded webinar"><a href="/innovative-learning/webinars/">Webinars</a></button>
-        <button class="btn btn-sm rounded bsl"><a href="/innovative-learning/bite-size-learning/">Bite-sized Learning</a></button>
+        <button class="btn btn-sm rounded ecourse"><a href="/innovative-learning/e-courses/">eCourses</a></button>
       </div>
     <?php endif; ?>
     <?php while (have_posts()): the_post(); ?>
