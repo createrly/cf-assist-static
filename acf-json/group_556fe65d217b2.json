@@ -3,6 +3,22 @@
     "title": "Course Info",
     "fields": [
         {
+            "key": "field_557e82f0b4b5e",
+            "label": "Enable Course Pacing",
+            "name": "enable_course_pacing",
+            "type": "true_false",
+            "instructions": "Check this box to divide courses into self-paced and facilitated categories.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
             "key": "field_556fecf0da4bd",
             "label": "Courses",
             "name": "courses",
@@ -122,6 +138,42 @@
                     "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
+                },
+                {
+                    "key": "field_557e8307b4b5f",
+                    "label": "Pacing",
+                    "name": "pacing",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_557e82f0b4b5e",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facilitated": "Facilitated",
+                        "self": "Self-Paced"
+                    },
+                    "default_value": {
+                        "": ""
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
                 }
             ]
         }
@@ -141,5 +193,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1434177670
+    "modified": 1434354508
 }
