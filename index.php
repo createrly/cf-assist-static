@@ -148,9 +148,9 @@
     <?php /* Courses */ ?>
     <?php if (have_rows('courses')): $enablePacing = get_field('enable_course_pacing'); ?>
       <div class="headline"></div>
-      <div class="row margin-bottom-20">
+      <div class="row margin-bottom-20 equal-height-columns">
         <?php while (have_rows('courses')): the_row(); ?>
-          <div class="col-md-4 col-sm-6 course <?php if ($enablePacing === true): ?>pacing-<?php the_sub_field('pacing'); ?><?php endif; ?>">
+          <div class="col-md-4 col-sm-6 course equal-height-column <?php if ($enablePacing === true): ?>pacing-<?php the_sub_field('pacing'); ?><?php endif; ?>">
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
               <div class="thumbnail-img">
                 <div class="overflow-hidden">
