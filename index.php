@@ -84,9 +84,7 @@
             <div class="col-sm-7 news-v3">
               <div class="news-v3-in-sm no-padding">
                 <ul class="list-inline posted-info">
-                  <li>By <?php the_author(); ?></li>
                   <li>In <?php the_category(', '); ?></li>
-                  <li>Posted <?php the_date(); ?></li>
                 </ul>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php the_excerpt(); ?>

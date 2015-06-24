@@ -10,8 +10,6 @@
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <div class="blog-tags">
       <ul class="list-unstyled list-inline blog-info">
-        <li><i class="fa fa-calendar"></i> <?php the_date(); ?></li>
-        <li><i class="fa fa-pencil"></i> <?php the_author(); ?></li>
         <li><i class="fa fa-tags"></i> <?php the_tags(); ?></li>
       </ul>
     </div>
