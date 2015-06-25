@@ -138,6 +138,14 @@
               <button class="btn btn-sm rounded facilitated"><a href="#">Facilitated Courses</a></button>
               <button class="btn btn-sm rounded self-paced"><a href="#">Self-Paced Courses</a></button>
             </div>
+            <div class="facilitated-description" style="display:none;">
+              <h4>Facilitated Courses</h4>
+              <p>These courses feature the guidance of an expert facilitator to lead participants through lessons and moderate the ‘peer discussion forum’ where participants interact to share knowledge. Facilitated courses are delivered twice annually and also issue e-Certificate upon its successful completion.</p>
+            </div>
+            <div class="self-paced-description" style="display:none;">
+              <h4>Self-Paced Courses</h4>
+              <p>These courses are available to participants at any given time to allow for learning at a self-paced rhythm. There is a discussion forum where participants can deliberate on topics together.</p>
+            </div>
           <?php endif; ?>
         <?php endif; ?>
       </div>

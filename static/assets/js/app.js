@@ -147,14 +147,18 @@ var App = function () {
         } else {
             if (jQuery('button.facilitated').hasClass('active')) {
                 jQuery('.course.pacing-facilitated:hidden').fadeIn();
+                jQuery('.facilitated-description:hidden').fadeIn();
             } else {
                 jQuery('.course.pacing-facilitated:visible').fadeOut();
+                jQuery('.facilitated-description:visible').fadeOut();
             }
 
             if (jQuery('button.self-paced').hasClass('active')) {
                 jQuery('.course.pacing-self:hidden').fadeIn();
+                jQuery('.self-paced-description:hidden').fadeIn();
             } else {
                 jQuery('.course.pacing-self:visible').fadeOut();
+                jQuery('.self-paced-description:visible').fadeOut();
             }
         }
     }
