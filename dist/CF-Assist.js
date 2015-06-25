@@ -2440,7 +2440,7 @@ var App = function () {
     }
 
     //Search Box (Header)
-    function handleSearch() {    
+    function handleSearch() {
         jQuery('.search').click(function () {
             if(jQuery('.search-btn').hasClass('fa-search')){
                 jQuery('.search-open').fadeIn(500);
@@ -2450,8 +2450,8 @@ var App = function () {
                 jQuery('.search-open').fadeOut(500);
                 jQuery('.search-btn').addClass('fa-search');
                 jQuery('.search-btn').removeClass('fa-times');
-            }   
-        }); 
+            }
+        });
     }
 
     //Search Box v1 (Header v5)
@@ -2486,11 +2486,11 @@ var App = function () {
         */
     }
 
-    //Equal Height Columns    
+    //Equal Height Columns
     function handleEqualHeightColumns() {
-        var EqualHeightColumns = function () {            
+        var EqualHeightColumns = function () {
             $(".equal-height-columns").each(function() {
-                heights = [];              
+                heights = [];
                 $(".equal-height-column", this).each(function() {
                     $(this).removeAttr("style");
                     heights.push($(this).height()); // write column's heights to the array
@@ -2499,22 +2499,22 @@ var App = function () {
             });
         }
 
-        EqualHeightColumns();        
-        $(window).resize(function() {            
+        EqualHeightColumns();
+        $(window).resize(function() {
             EqualHeightColumns();
         });
         $(window).load(function() {
             EqualHeightColumns("img.equal-height-column");
         });
-    }    
+    }
 
     //Hover Selector
     function handleHoverSelector() {
-        $('.hoverSelector').on('hover', function(e) {        
+        $('.hoverSelector').on('hover', function(e) {
             $('.hoverSelectorBlock', this).toggleClass('show');
-            e.stopPropagation();            
+            e.stopPropagation();
         });
-    }    
+    }
 
     //Bootstrap Tooltips and Popovers
     function handleBootstrap() {
@@ -2526,10 +2526,10 @@ var App = function () {
 
         /*Tooltips*/
         jQuery('.tooltips').tooltip();
-        jQuery('.tooltips-show').tooltip('show');      
-        jQuery('.tooltips-hide').tooltip('hide');       
-        jQuery('.tooltips-toggle').tooltip('toggle');       
-        jQuery('.tooltips-destroy').tooltip('destroy');       
+        jQuery('.tooltips-show').tooltip('show');
+        jQuery('.tooltips-hide').tooltip('hide');
+        jQuery('.tooltips-toggle').tooltip('toggle');
+        jQuery('.tooltips-destroy').tooltip('destroy');
 
         /*Popovers*/
         jQuery('.popovers').popover();
@@ -2537,6 +2537,39 @@ var App = function () {
         jQuery('.popovers-hide').popover('hide');
         jQuery('.popovers-toggle').popover('toggle');
         jQuery('.popovers-destroy').popover('destroy');
+    }
+
+    function handlePacingFilters() {
+        jQuery('button.facilitated').click(function(e){
+            e.preventDefault();
+            jQuery(this).toggleClass('active');
+            jQuery('button.self-paced').removeClass('active');
+            updatePacingFilters();
+        });
+        jQuery('button.self-paced').click(function(e){
+            e.preventDefault();
+            jQuery(this).toggleClass('active');
+            jQuery('button.facilitated').removeClass('active');
+            updatePacingFilters();
+        });
+    }
+
+    function updatePacingFilters() {
+        if (jQuery('button.facilitated.active').length + jQuery('button.self-paced.active').length === 0) {
+            jQuery('.course:hidden').fadeIn();
+        } else {
+            if (jQuery('button.facilitated').hasClass('active')) {
+                jQuery('.course.pacing-facilitated:hidden').fadeIn();
+            } else {
+                jQuery('.course.pacing-facilitated:visible').fadeOut();
+            }
+
+            if (jQuery('button.self-paced').hasClass('active')) {
+                jQuery('.course.pacing-self:hidden').fadeIn();
+            } else {
+                jQuery('.course.pacing-self:visible').fadeOut();
+            }
+        }
     }
 
     return {
@@ -2549,9 +2582,10 @@ var App = function () {
             handleMegaMenu();
             handleHoverSelector();
             handleEqualHeightColumns();
+            handlePacingFilters();
         },
 
-        //Scroll Bar 
+        //Scroll Bar
         initScrollBar: function () {
             jQuery('.mCustomScrollbar').mCustomScrollbar({
                 theme:"minimal",
@@ -2560,7 +2594,7 @@ var App = function () {
             });
         },
 
-        //Counters 
+        //Counters
         initCounter: function () {
             jQuery('.counter').counterUp({
                 delay: 10,
@@ -2586,7 +2620,7 @@ var App = function () {
                     jQuery(this).find('.dropdown-menu').first().stop(true, true).slideUp();
                 });
             }
-         
+
             jQuery(window).resize(function(){
                 if (jQuery(window).width() > 768) {
                     MenuMode();
@@ -2600,7 +2634,8 @@ var App = function () {
 
     };
 
-}();;var OwlCarousel = function () {
+}();
+;var OwlCarousel = function () {
 
     return {
 
