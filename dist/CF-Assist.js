@@ -2736,25 +2736,25 @@ var App = function () {
 }();;var ParallaxSlider = function () {
 
     return {
-        
+
         //Parallax Slider
         initParallaxSlider: function () {
 			$('#da-slider').cslider({
-			    current     : 0,    
+			    current     : 0,
 			    // index of current slide
-			     
-			    bgincrement : 50,  
-			    // increment the background position 
+
+			    bgincrement : 50,
+			    // increment the background position
 			    // (parallax effect) when sliding
-			     
-			    autoplay    : false,
+
+			    autoplay    : true,
 			    // slideshow on / off
-			     
-			    interval    : 4000  
+
+			    interval    : 4000
 			    // time between transitions
 			});
         },
 
     };
 
-}();        
+}();
