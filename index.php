@@ -84,7 +84,7 @@
             <div class="col-sm-7 news-v3">
               <div class="news-v3-in-sm no-padding">
                 <ul class="list-inline posted-info">
-                  <li>In <?php the_category(', '); ?></li>
+                  <li>In <?php $categories = array(); foreach (get_the_category() as $category) $categories[] = "<span style='color:#ea7d2b;'>".$category->name."</span>"; echo implode(', ', $categories); ?></li>
                 </ul>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php the_excerpt(); ?>
