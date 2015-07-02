@@ -3617,6 +3617,10 @@ img.img-center,
   text-decoration:none;
 }
 
+.category-button:active {
+  color:#fff;
+}
+
 .category-button.active {
   opacity:0.65;
 }
