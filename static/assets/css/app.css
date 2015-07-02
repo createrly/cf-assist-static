@@ -3598,6 +3598,7 @@ img.img-center,
    transform: scale(2) rotate(5deg);
 }
 
+/* Blog category filter buttons */
 .category-button {
   display: block;
   background: #92c136;
@@ -3609,18 +3610,32 @@ img.img-center,
   font-weight: 200;
   font-family: "Open Sans",Arial,sans-serif;
   line-height: 33px;
+  opacity:0.65;
 }
-
 .category-button:hover {
   color:#fff;
   opacity:0.85;
   text-decoration:none;
 }
-
 .category-button:active {
   color:#fff;
 }
-
 .category-button.active {
+  opacity:1;
+}
+
+/* Facilitated/Self-Paced Lesson Type Buttons */
+button.facilitated, button.self-paced {
+  color:#fff;
+  text-transform:uppercase;
+  background:#ea7d2b;
   opacity:0.65;
+}
+button.facilitated a, button.self-paced a {
+  color:#fff;
+}
+button.facilitated.active, button.self-paced.active {
+  opacity:1;
+  box-shadow:none;
+  -webkit-box-shadow:none;
 }
