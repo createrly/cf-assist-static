@@ -86,7 +86,33 @@ if (!function_exists('cfassistPlugins'))
 add_action('tgmpa_register', 'cfassistPlugins');
 
 
+/* Category Buttons */
+class CFAssist_Widget_Category_Buttons extends WP_Widget {
+  public function __construct() {
+    parent::__construct('category-buttons', 'Category Buttons', array('classname' => 'widget_category_buttons', 'description' => 'Your site\'s category buttons'));
+    $this->alt_option_name = 'widget_category_buttons';
 
+    add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+  }
+
+  public function widget($args, $instance)
+  {
+    ?>
+    <a href="/category/global-expo" class="category-button global-expo">Global Expo</a>
+    <a href="/category/regional-expo" class="category-button regional-expo">Regional Expo</a>
+    <?php
+  }
+
+  public function update($new, $old)
+  {
+
+  }
+
+  public function form($instance)
+  {
+
+  }
+}
 
 /* Recent Posts Widget */
 class CFAssist_Widget_Recent_Posts extends WP_Widget {
@@ -230,5 +256,6 @@ class CFAssist_Widget_Recent_Posts extends WP_Widget {
 function cfassistCustomWidget()
 {
   register_widget('CFAssist_Widget_Recent_Posts');
+  register_widget('CFAssist_Widget_Category_Buttons');
 }
 add_action('widgets_init', 'cfassistCustomWidget');

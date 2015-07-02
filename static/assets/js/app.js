@@ -163,6 +163,42 @@ var App = function () {
         }
     }
 
+    function handleBlogFilters() {
+      jQuery('a.category-button.global-expo').click(function(e){
+        e.preventDefault();
+        jQuery(this).toggleClass('active');
+        jQuery('a.category-button:not(.global-expo)').removeClass('active');
+        updateBlogFilters();
+      });
+      jQuery('a.category-button.regional-expo').click(function(e){
+        e.preventDefault();
+        jQuery(this).toggleClass('active');
+        jQuery('a.category-button:not(.regional-expo)').removeClass('active');
+        updateBlogFilters();
+      });
+    }
+
+    function updateBlogFilters() {
+      if (!jQuery('body').hasClass('blog'))
+        return;
+
+      if (jQuery('a.category-button.active').length === 0) {
+        jQuery('.post.type-post:hidden').fadeIn();
+      } else {
+        if (jQuery('a.category-button.global-expo').hasClass('active')) {
+          jQuery('.post.type-post.category-global-expo:hidden').fadeIn();
+        } else {
+          jQuery('.post.type-post.category-global-expo:visible').fadeOut();
+        }
+
+        if (jQuery('a.category-button.regional-expo').hasClass('active')) {
+          jQuery('.post.type-post.category-regional-expo:hidden').fadeIn();
+        } else {
+          jQuery('.post.type-post.category-regional-expo:visible').fadeOut();
+        }
+      }
+    }
+
     return {
         init: function () {
             handleBootstrap();
@@ -174,6 +210,7 @@ var App = function () {
             handleHoverSelector();
             handleEqualHeightColumns();
             handlePacingFilters();
+            handleBlogFilters();
         },
 
         //Scroll Bar

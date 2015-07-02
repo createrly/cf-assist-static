@@ -58,7 +58,7 @@
       <div class="col-md-9">
 
         <?php while (have_posts()): the_post(); ?>
-          <div class="row margin-bottom-20">
+          <div class="row margin-bottom-20 <?php echo implode(' ', get_post_class()); ?>">
             <div class="col-sm-5 sm-margin-bottom-20">
               <?php if (get_post_format() === 'gallery'): ?>
                 <div class="carousel slide" data-ride="carousel" id="blog-carousel-<?php the_ID(); ?>">
@@ -90,9 +90,8 @@
                 <?php the_excerpt(); ?>
               </div>
             </div>
+            <div class="clearfix margin-bottom-20"><hr></div>
           </div>
-
-          <div class="clearfix margin-bottom-20"><hr></div>
 
         <?php endwhile; ?>
 
