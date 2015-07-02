@@ -2599,15 +2599,15 @@ var App = function () {
         jQuery('.post.type-post:hidden').fadeIn();
       } else {
         if (jQuery('a.category-button.global-expo').hasClass('active')) {
-          jQuery('.post.type-post.category-global-expo:hidden').fadeIn().next().fadeIn();
+          jQuery('.post.type-post.category-global-expo:hidden').fadeIn();
         } else {
-          jQuery('.post.type-post.category-global-expo:visible').fadeOut().next().fadeOut();
+          jQuery('.post.type-post.category-global-expo:visible').fadeOut();
         }
 
         if (jQuery('a.category-button.regional-expo').hasClass('active')) {
-          jQuery('.post.type-post.category-regional-expo:hidden').fadeIn().next().fadeIn();
+          jQuery('.post.type-post.category-regional-expo:hidden').fadeIn();
         } else {
-          jQuery('.post.type-post.category-regional-expo:visible').fadeOut().next().fadeOut();
+          jQuery('.post.type-post.category-regional-expo:visible').fadeOut();
         }
       }
     }
