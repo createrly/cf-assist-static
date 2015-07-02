@@ -139,6 +139,7 @@ var App = function () {
             jQuery('button.facilitated').removeClass('active');
             updatePacingFilters();
         });
+        updatePacingFilters();
     }
 
     function updatePacingFilters() {
