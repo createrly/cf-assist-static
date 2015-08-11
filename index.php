@@ -111,8 +111,8 @@
     <?php if (wp_get_post_parent_id(get_the_ID()) === 11): ?>
       <div class="col-lg-12 col-md-3">
         <a class="btn btn-sm rounded bsl" style="color:#fff;" href="/innovative-learning/bite-size-learning/">Bite-sized Learning</a>
-        <a class="btn btn-sm rounded mooc" style="color:#fff;" href="/innovative-learning/moocs/">MOOCs</a>
         <a class="btn btn-sm rounded webinar" style="color:#fff;" href="/innovative-learning/webinars/">Webinars</a>
+        <a class="btn btn-sm rounded mooc" style="color:#fff;" href="/innovative-learning/moocs/">MOOCs</a>
         <a class="btn btn-sm rounded ecourse" style="color:#fff;" href="/innovative-learning/e-courses/">eCourses</a>
       </div>
     <?php endif; ?>
