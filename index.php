@@ -120,10 +120,10 @@
       <div class="headline"><h2><?php the_title(); ?></h2></div>
       <div class="row">
         <?php if (get_page_template_slug() === 'two-column.php'): ?>
-          <div class="col-md-6">
+          <div class="col-md-8">
             <?php the_content(); ?>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <?php if (strlen(get_field('second_column_image')) > 0): ?>
               <img class="img-responsive" src="<?php the_field('second_column_image'); ?>">
             <?php endif; ?>
