@@ -8,11 +8,11 @@
       </div>
     <?php endif; ?>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <div class="blog-tags">
+    <?php /*<div class="blog-tags">
       <ul class="list-unstyled list-inline blog-info">
         <li><i class="fa fa-tags"></i> <?php the_tags(); ?></li>
       </ul>
-    </div>
+    </div>*/ ?>
     <?php the_content(); ?>
   <?php endwhile; ?>
 </div>
