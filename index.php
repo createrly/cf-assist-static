@@ -28,7 +28,7 @@
       <div class="row margin-bottom-20">
         <?php while (have_rows('our_work')): the_row(); ?>
           <div class="col-md-4 col-sm-6">
-              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+              <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                       <div class="overflow-hidden">
                           <img class="img-responsive" src="<?php the_sub_field('image'); ?>" alt="">
@@ -157,7 +157,7 @@
       <div class="row margin-bottom-20 equal-height-columns">
         <?php while (have_rows('courses')): the_row(); ?>
           <div class="col-md-4 col-sm-6 course equal-height-column <?php if ($enablePacing === true): ?>pacing-<?php the_sub_field('pacing'); ?><?php endif; ?>">
-            <div class="thumbnails thumbnail-style thumbnail-kenburn">
+            <div class="thumbnails thumbnail-style">
               <div class="thumbnail-img">
                 <div class="overflow-hidden">
                   <img class="img-responsive" src="<?php the_sub_field('course_image'); ?>">
