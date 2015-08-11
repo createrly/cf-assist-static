@@ -3,8 +3,8 @@
 <div class="container content blog-page blog-item">
   <?php while (have_posts()): the_post(); ?>
     <?php if (has_post_thumbnail()): ?>
-      <div class="blog-img">
-        <?php the_post_thumbnail(null, array('class' => 'img-responsive')); ?>
+      <div class="blog-img" style="float:right;padding-left:20px;padding-bottom:20px;">
+        <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
       </div>
     <?php endif; ?>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
