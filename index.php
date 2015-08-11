@@ -176,7 +176,10 @@
     <?php endif; ?>
 
     <?php if (have_rows('reports')): ?>
-      <div class="row category margin-bottom-20">
+      <div class="headline">
+        <h2>Annual Reports</h2>
+      </div>
+      <div class="row category margin-top-20 margin-bottom-20">
         <?php while (have_rows('reports')): the_row(); ?>
           <div class="col-md-4 col-sm-6">
             <div class="content-boxes-v3 margin-bottom-10 md-margin-bottom-20">
