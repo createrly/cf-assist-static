@@ -127,16 +127,22 @@ var App = function () {
     }
 
     function handlePacingFilters() {
+        jQuery('button.all').click(function(e){
+            e.preventDefault();
+            jQuery(this).toggleClass('active');
+            jQuery('button.self-paced, button.facilitated').removeClass('active');
+            updatePacingFilters();
+        });
         jQuery('button.facilitated').click(function(e){
             e.preventDefault();
             jQuery(this).toggleClass('active');
-            jQuery('button.self-paced').removeClass('active');
+            jQuery('button.self-paced, button.all').removeClass('active');
             updatePacingFilters();
         });
         jQuery('button.self-paced').click(function(e){
             e.preventDefault();
             jQuery(this).toggleClass('active');
-            jQuery('button.facilitated').removeClass('active');
+            jQuery('button.facilitated, button.all').removeClass('active');
             updatePacingFilters();
         });
         updatePacingFilters();

@@ -3625,16 +3625,16 @@ img.img-center,
 }
 
 /* Facilitated/Self-Paced Lesson Type Buttons */
-button.facilitated, button.self-paced {
+button.facilitated, button.self-paced, button.all {
   color:#fff;
   text-transform:uppercase;
   background:#ea7d2b;
   opacity:0.65;
 }
-button.facilitated a, button.self-paced a {
+button.facilitated a, button.self-paced a, button.all a {
   color:#fff;
 }
-button.facilitated.active, button.self-paced.active {
+button.facilitated.active, button.self-paced.active, button.all.active {
   opacity:1;
   box-shadow:none;
   -webkit-box-shadow:none;

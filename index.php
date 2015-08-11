@@ -134,8 +134,9 @@
           </div>
           <?php if (get_field('enable_course_pacing') === true): ?>
             <div class="col-lg-12 col-md-3">
-              <button class="btn btn-sm facilitated active"><a href="#">Facilitated Courses</a></button>
+              <button class="btn btn-sm facilitated"><a href="#">Facilitated Courses</a></button>
               <button class="btn btn-sm self-paced"><a href="#">Self-Paced Courses</a></button>
+              <button class="btn btn-sm all active"><a href="#">All</a></button>
               <hr class="course-button-line">
             </div>
             <div class="col-xs-12 facilitated-description" style="display:none;">
