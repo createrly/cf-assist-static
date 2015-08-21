@@ -15,7 +15,7 @@ get_header(); ?>
 
     <?php while (have_rows('sections')): the_row(); ?>
       <div class="row category margin-bottom-20">
-        <div class="headline" style="padding-left:15px;"><h2><?php the_sub_field('section_heading'); ?></h2></div>
+        <div class="headline" style="padding-left:15px;"><h3 style="border-bottom:none;"><?php the_sub_field('section_heading'); ?></h3></div>
         <?php foreach (array('column_1','column_3','column_2') as $column): ?>
           <?php if (have_rows($column)): ?>
             <div class="col-md-4 col-sm-6">
