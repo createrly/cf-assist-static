@@ -8,6 +8,7 @@
   <title><?php bloginfo('name'); ?> &raquo; <?php is_front_page() ? '' : wp_title(''); ?></title>
   <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
   <link rel='stylesheet' type='text/css' href='<?php echo get_template_directory_uri(); ?>/dist/style.css'>
+  <link rel='stylesheet' type='text/css' href='<?php echo get_template_directory_uri(); ?>/dist/flexslider/flexslider.css'>
 
   <?php wp_head(); ?>
 </head>

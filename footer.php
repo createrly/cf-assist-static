@@ -58,11 +58,15 @@
   </div><!--/wrapper-->
 
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/CF-Assist.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/flexslider/jquery.flexslider-min.js"></script>
   <script type="text/javascript">
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function($) {
       	App.init();
         OwlCarousel.initOwlCarousel();
         ParallaxSlider.initParallaxSlider();
+        $('.flexslider').flexslider({
+          animation: "slide"
+        });
     });
   </script>
   <!--[if lt IE 9]>
