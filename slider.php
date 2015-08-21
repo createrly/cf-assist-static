@@ -4,7 +4,7 @@
       <?php while (have_rows('image_sliders')): the_row(); ?>
         <li>
           <div class="row">
-            <div class="col-md-3" style="min-height:400px;background:#fff;">
+            <div class="col-md-3" style="min-height:400px;background:#fff;padding-top:50px;">
               <a href="<?php the_sub_field('link'); ?>"><h2><?php the_sub_field('heading'); ?></h2></a>
               <p><?php the_sub_field('subheading'); ?></p>
             </div>
