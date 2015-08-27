@@ -8,7 +8,9 @@
               <a href="<?php the_sub_field('link'); ?>"><h2><?php the_sub_field('heading'); ?></h2></a>
               <p><?php the_sub_field('subheading'); ?></p>
             </div>
-            <div class="col-md-9" style="min-height:400px;background:transparent url('<?php the_sub_field('image'); ?>');background-size:cover;"></div>
+            <a href="<?php the_sub_field('link'); ?>">
+              <div class="col-md-9" style="min-height:400px;background:transparent url('<?php the_sub_field('image'); ?>');background-size:cover;"></div>
+            </a>
           </div>
           <?php /*<a href="<?php the_sub_field('link'); ?>"><h2>
             <?php $lines = explode("\n", get_sub_field('heading'));
