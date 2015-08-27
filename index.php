@@ -124,9 +124,8 @@
             <?php the_content(); ?>
           </div>
           <div class="col-md-4">
-            <?php if (strlen(get_field('second_column_image')) > 0): ?>
-              <img class="img-responsive" src="<?php the_field('second_column_image'); ?>">
-            <?php endif; ?>
+            <?php $image = get_field('second_column_image'); ?>
+            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
           </div>
         <?php else: ?>
           <div class="col-md-12 md-margin-bottom-50">
