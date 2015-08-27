@@ -9,7 +9,12 @@
               <p><?php the_sub_field('subheading'); ?></p>
             </div>
             <a href="<?php the_sub_field('link'); ?>">
-              <div class="col-md-9" style="min-height:400px;background:transparent url('<?php the_sub_field('image'); ?>');background-size:cover;"></div>
+              <?php $image = get_sub_field('image'); ?>
+              <div class="col-md-9" style="min-height:400px;background:transparent url('<?php echo $image['url']; ?>');background-size:cover;position:relative;">
+                <?php if (strlen($image['caption']) > 0): ?>
+                  <small style="background:rgba(0,0,0,0.8);padding:5px;position:absolute;left:5px;bottom:5px;color:#ccc;"><?php echo $image['caption']; ?></small>
+                <?php endif; ?>
+              </div>
             </a>
           </div>
           <?php /*<a href="<?php the_sub_field('link'); ?>"><h2>
