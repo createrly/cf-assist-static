@@ -10,6 +10,7 @@ if (!function_exists('cfassistInit'))
     ));
     add_theme_support('post-thumbnails');
     add_theme_support('post-formats', array('gallery', 'video'));
+    add_image_size('course-thumbnail', 346, 243, true, array('center', 'center'));
   }
 }
 add_action('after_setup_theme', 'cfassistInit');

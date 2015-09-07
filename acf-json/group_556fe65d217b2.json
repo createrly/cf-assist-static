@@ -107,14 +107,14 @@
             "class":"",
             "id":""
           },
-          "return_format":"url",
+          "return_format":"array",
           "preview_size":"thumbnail",
           "library":"all",
-          "min_width":346,
-          "min_height":243,
+          "min_width":"",
+          "min_height":"",
           "min_size":"",
-          "max_width":346,
-          "max_height":243,
+          "max_width":"",
+          "max_height":"",
           "max_size":"",
           "mime_types":""
         },
@@ -193,5 +193,5 @@
   "label_placement":"top",
   "instruction_placement":"label",
   "hide_on_screen":"",
-  "modified":1439262950
+  "modified":1441668782
 }
