@@ -48,9 +48,17 @@
 <?php endif; ?>
 
 <?php /* Blog Page */ ?>
-<?php if (is_home()): ?>
+<?php if (is_home() || is_category()): ?>
   <div class="container content-md">
     <div class="row">
+      <div class="col-md-12">
+          <ul class="blog-category-buttons" style="list-style:none;">
+            <?php $categories = get_the_category(); $category_id = $categories[0]->cat_ID; ?>
+            <li <?php if (is_home()): ?>class="active"<?php endif; ?>><a class="category-button" href="/knowledge-fora/">All</a></li>
+            <li <?php if ($category_id == 6): ?>class="active"<?php endif; ?>><a class="category-button" href="/category/global-expo">Global Expo</a></li>
+            <li <?php if (!is_home() && $category_id == 7): ?>class="active"<?php endif; ?>><a class="category-button" href="/category/regional-expo">Regional Expo</a></li>
+          </ul>
+      </div>
       <div class="col-md-3"><?php /* Start Sidebar */ ?>
         <?php dynamic_sidebar('blog-sidebar'); ?>
       </div><?php /* End Sidebar */ ?>
@@ -106,7 +114,7 @@
   </div>
 <?php endif; ?>
 
-<?php if (!is_home() && !is_front_page() && have_posts()): ?>
+<?php if (!is_home() && !is_front_page() && !is_category() && have_posts()): ?>
   <div class="container content-sm">
     <?php if (wp_get_post_parent_id(get_the_ID()) === 11): ?>
       <div class="col-lg-12 col-md-3">
