@@ -167,9 +167,10 @@
             <div class="thumbnails thumbnail-style">
               <div class="thumbnail-img">
                 <div class="overflow-hidden">
-                  <img class="img-responsive" src="<?php $image = get_sub_field('course_image'); echo $image['sizes']['course-thumbnail']; ?>">
+                  <a href="<?php the_sub_field('course_url'); ?>">
+                    <img class="img-responsive" src="<?php $image = get_sub_field('course_image'); echo $image['sizes']['course-thumbnail']; ?>">
+                  </a>
                 </div>
-                <a class="btn-more hover-effect" href="<?php the_sub_field('course_url'); ?>">read more +</a>
               </div>
               <div class="caption">
                 <h3><a class="hover-effect" href="<?php the_sub_field('course_url'); ?>"><?php the_sub_field('course_title'); ?></a></h3>
