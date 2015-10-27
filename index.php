@@ -51,14 +51,6 @@
 <?php if (is_home() || is_category()): ?>
   <div class="container content-md">
     <div class="row">
-      <div class="col-md-12">
-          <ul class="blog-category-buttons" style="list-style:none;">
-            <?php $categories = get_the_category(); $category_id = $categories[0]->cat_ID; ?>
-            <li <?php if (is_home()): ?>class="active"<?php endif; ?>><a class="category-button" href="/knowledge-fora/">All</a></li>
-            <li <?php if ($category_id == 6): ?>class="active"<?php endif; ?>><a class="category-button" href="/category/global-expo">Global Expo</a></li>
-            <li <?php if (!is_home() && $category_id == 7): ?>class="active"<?php endif; ?>><a class="category-button" href="/category/regional-expo">Regional Expo</a></li>
-          </ul>
-      </div>
       <div class="col-md-3"><?php /* Start Sidebar */ ?>
         <?php dynamic_sidebar('blog-sidebar'); ?>
       </div><?php /* End Sidebar */ ?>
@@ -216,6 +208,29 @@
               <h3><a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('title'); ?></a></h3>
               <?php the_sub_field('description'); ?>
               <a href="<?php the_sub_field('link'); ?>" class="btn-u btn-u-sm">Learn More</a>
+            </div>
+          </li>
+        <?php endwhile; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+<?php endif; ?>
+
+<?php /* Knowledge Fora */ ?>
+<?php if ($post->post_parent === 7): ?>
+  <?php $pages = new WP_Query(array('post_type' => 'page', 'post_parent' => get_the_ID())); ?>
+  <?php if ($pages->have_posts()): ?>
+    <div class="container content-md" style="background:#e8e8e8;">
+      <ul class="row block-grid-v2">
+        <?php while ($pages->have_posts()): $pages->the_post(); ?>
+          <li class="col-md-3 col-sm-6 md-margin-bottom-30">
+            <div class="easy-block-v1">
+              <?php the_post_thumbnail(null, array('class' => 'img-responsive')); ?>
+            </div>
+            <div class="block-grid-v2-info rounded-bottom">
+              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>" class="btn-u btn-u-sm">Learn More</a>
             </div>
           </li>
         <?php endwhile; ?>
