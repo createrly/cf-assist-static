@@ -65,7 +65,8 @@
         OwlCarousel.initOwlCarousel();
         ParallaxSlider.initParallaxSlider();
         $('.flexslider').flexslider({
-          animation: "slide"
+          animation: "slide",
+          slideshowSpeed: 15000
         });
     });
   </script>
